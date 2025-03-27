@@ -11,6 +11,8 @@
 **/[Ll]ogs/
 **/[Mm]emoryCaptures/
 
+/[Mm]emoryCaptures/
+
 # Recordings can get excessive in size
 /[Rr]ecordings/
 
