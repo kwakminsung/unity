@@ -104,8 +104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd82eb3a4042cf54491cd2baba70cb43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  moveDirection: {x: 0, y: 1, z: 0}
+  moveSpeed: 8
+  moveDirection: {x: 0, y: 2, z: 0}
 --- !u!58 &-9041181173805960574
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -194,4 +194,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73123ca83ce58bd44b9b6023ca5e74dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: cc53936566984d3459302b1e2fd67457, type: 2}
+  stageData: {fileID: 11400000, guid: aef2b64693e85274f9f9e9f3a85a078c, type: 2}

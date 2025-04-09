@@ -237,7 +237,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f60f68af38401464d8ad797ed8050044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: {x: 0, y: -35, z: 0}
+  distance: {x: 0, y: -15, z: 0}
 --- !u!114 &4350930160696507329
 MonoBehaviour:
   m_ObjectHideFlags: 0

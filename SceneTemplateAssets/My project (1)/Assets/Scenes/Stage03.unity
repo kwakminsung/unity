@@ -326,6 +326,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1479628197307503044, guid: 0d7026536416f1c48aaa40f3438bdc45, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 2477788510235829135, guid: 0d7026536416f1c48aaa40f3438bdc45, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -397,7 +401,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4166109728240307045, guid: 0d7026536416f1c48aaa40f3438bdc45, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1214508383}
   m_SourcePrefab: {fileID: 100100000, guid: 0d7026536416f1c48aaa40f3438bdc45, type: 3}
 --- !u!114 &784795030 stripped
 MonoBehaviour:
@@ -927,6 +934,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4166109728240307045, guid: 0d7026536416f1c48aaa40f3438bdc45, type: 3}
   m_PrefabInstance: {fileID: 784795029}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1214508383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214508382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a26c4d5c015ee154fbe75bd2d77dfc9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  explosionPrefab: {fileID: 8971825870102750456, guid: 8311a458ef049384a821a68055128ebb, type: 3}
 --- !u!1001 &1330589727
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -943,6 +964,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2636136303450227121, guid: 0c7b5a6a375b07c4e871c67a17ac6924, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1128251784468316443, guid: 7d529c9fd6a26d747b2535efb22d6b23, type: 3}
     - target: {fileID: 3494800288691886285, guid: 0c7b5a6a375b07c4e871c67a17ac6924, type: 3}
       propertyPath: m_Name
       value: Canvas

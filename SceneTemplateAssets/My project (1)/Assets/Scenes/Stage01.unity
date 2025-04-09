@@ -655,13 +655,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471705283}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a26c4d5c015ee154fbe75bd2d77dfc9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  explosionPrefab: {fileID: 7217278742020925624, guid: 67e68944ca792fa42af3828ff967b10f, type: 3}
+  explosionPrefab: {fileID: 8971825870102750456, guid: 8311a458ef049384a821a68055128ebb, type: 3}
 --- !u!114 &1657859311 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5977147651235968181, guid: 9c3fdc29c1c93a8478c6da0126ead6d5, type: 3}
