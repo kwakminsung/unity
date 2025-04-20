@@ -355,6 +355,10 @@ PrefabInstance:
       propertyPath: stageData
       value: 
       objectReference: {fileID: 11400000, guid: aef2b64693e85274f9f9e9f3a85a078c, type: 2}
+    - target: {fileID: 5988191431833247890, guid: 0d7026536416f1c48aaa40f3438bdc45, type: 3}
+      propertyPath: explosionPrefab
+      value: 
+      objectReference: {fileID: 4503950568763579454, guid: 94bf1a61e14fd5049976f6df6372143a, type: 3}
     - target: {fileID: 7315905633725308805, guid: 0d7026536416f1c48aaa40f3438bdc45, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.1

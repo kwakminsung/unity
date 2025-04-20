@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
 
 //방향키로 플레이어가 움직일 때 벽을 감지하고 자연스럽게 움직이기
 public class PlayerControll : MonoBehaviour
@@ -13,12 +14,25 @@ public class PlayerControll : MonoBehaviour
     private AroundWrapPlayer aroundWrap; //맵 외곽을 넘을 때 위치를 반대쪽으로 연결해주는 컴포넌트
     private SpriteRenderer spriteRenderer; //spriteRenderer
     private Tilemap Tilemap;
+    private PlayerHPControll playerHP;
+    [SerializeField]
+    private PlayerScore PlayerScore;
+    [SerializeField]
+    private float checkInterval = 0.5f;
+    [SerializeField]
+    private string NextSceneName = "restart";
+
+    private void Start()
+    {
+        StartCoroutine(CheckItemRoutine());
+    }
     private void Awake()
     {
         tileLayer = LayerMask.GetMask("Tile"); //"Tile" 레이어 마스크를 얻음("벽 감지에 사용")
         movement2D = GetComponent<Movement2D>(); //현재 오브젝트에서 Movement2D 컴포넌트 가져오기
         aroundWrap = GetComponent<AroundWrapPlayer>(); //현재 오브젝트에서 AroundWrap 컴포넌트 가져오기
         spriteRenderer = GetComponent<SpriteRenderer>();
+        playerHP = GetComponent<PlayerHPControll>();
         GameObject tilemapObj = GameObject.Find("Tilemapitem");
         if (tilemapObj != null)
         {
@@ -64,6 +78,22 @@ public class PlayerControll : MonoBehaviour
         }
     }
 
+    private System.Collections.IEnumerator CheckItemRoutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(checkInterval);
+
+            GameObject[] items = GameObject.FindGameObjectsWithTag("Item");
+
+            if (items.Length == 0)
+            {
+                Debug.Log("모든 아이템을 먹었습니다. 다음 씬으로 이동합니다");
+                SceneManager.LoadScene(NextSceneName);
+                yield break;
+            }
+        }
+    }
     //아이템과 충돌했을 때 처리
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -71,6 +101,9 @@ public class PlayerControll : MonoBehaviour
         {
             Vector3 hitPosition = collision.ClosestPoint(transform.position);
             DestroyTile(hitPosition);
+            Destroy(collision.gameObject);
+            PlayerScore.AddScore();
+            
         }
 
         if ( collision.CompareTag("Enemy"))
@@ -79,6 +112,9 @@ public class PlayerControll : MonoBehaviour
             StopCoroutine("OnHit");
             StartCoroutine("OnHit");
             Destroy(collision.gameObject);
+            playerHP.StartBoom();
+            PlayerScore.AddScore();
+            
         }
     }
 

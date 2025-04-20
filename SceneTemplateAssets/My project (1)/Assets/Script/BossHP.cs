@@ -10,9 +10,11 @@ public class BossHP : MonoBehaviour
     private float currentHP;
     private SpriteRenderer spriteRenderer;
     public GameObject nextSceneButton;
+    private Boss boss;
 
     public float MaxHP => maxHP;
     public float CurrentHP => currentHP;
+
 
 
     private void Start()
@@ -24,6 +26,7 @@ public class BossHP : MonoBehaviour
     {
         currentHP = maxHP;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        boss = GetComponent<Boss>();
     }
 
     public void TakeDamage(float damage)
@@ -36,6 +39,7 @@ public class BossHP : MonoBehaviour
         if (currentHP <= 0 )
         {
             Die();
+            boss.OnDie();
         }
     }
 

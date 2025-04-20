@@ -14,6 +14,8 @@ public class Boss : MonoBehaviour
     private Movement2D movement2D;
     private BossWeapon bossWeapon;
     private BossHP bossHP;
+    [SerializeField]
+    private GameObject explosionPrefab;
 
     private void Awake()
     {
@@ -102,4 +104,10 @@ public class Boss : MonoBehaviour
             yield return null;
         }
     }
+
+    public void OnDie()
+    {
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
+}

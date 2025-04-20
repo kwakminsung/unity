@@ -728,6 +728,10 @@ PrefabInstance:
       propertyPath: bossAppearPoint
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5988191431833247890, guid: 0d7026536416f1c48aaa40f3438bdc45, type: 3}
+      propertyPath: explosionPrefab
+      value: 
+      objectReference: {fileID: 8724097059905628470, guid: d6c6ff1ccae55dc45ad92acea48de0ea, type: 3}
     - target: {fileID: 7315905633725308805, guid: 0d7026536416f1c48aaa40f3438bdc45, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.1
